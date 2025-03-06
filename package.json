@@ -5,7 +5,7 @@
     "taskterm": "dist/taskManager.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/taskManager.js > temp && mv temp dist/taskManager.js && chmod +x dist/taskManager.js",
     "start": "ts-node src/taskManager.ts"
   },
   "keywords": [],
