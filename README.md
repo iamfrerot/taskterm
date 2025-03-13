@@ -18,15 +18,13 @@ administrators, or anyone who preferes working in the terminal
 
 ## installation
 
-to use taskterm, you need to have `node.js` installed on your system (version 14
-or higher).
+You can install taskterm directly from npm:
 
 ```bash
-git clone https://github.com/iamfrerot/taskterm.git
-cd taskterm
-npm install
-npm run build
-npm install -g .
+# Install globally from npm
+npm install -g taskterm
+#or just run it without install it
+npx taskterm
 ```
 
 ## usage
