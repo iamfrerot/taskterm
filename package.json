@@ -1,6 +1,6 @@
 {
   "name": "taskterm",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "taskterm is a terminal-based manager app that allows you to manage your tasks directly from the command line. it provides a simple, efficient, and fast way to manage your tasks.",
   "main": "dist/taskManager.js",
   "bin": {
@@ -14,8 +14,8 @@
   "scripts": {
     "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/taskManager.js > temp && mv temp dist/taskManager.js && chmod +x dist/taskManager.js",
     "start": "ts-node src/taskManager.ts",
-    "prepublishOnly": "npm run build",
-    "publish": "./publish.sh"
+    "prepublishOnly": "npm run build && npm run patch",
+    "patch": "npm version patch"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
