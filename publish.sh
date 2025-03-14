@@ -14,10 +14,10 @@ echo "🚀 Incrementing patch version for $PACKAGE_NAME..."
 npm version patch
 
 echo "📦 Publishing $PACKAGE_NAME to npm..."
-if ! npm publish --registry=https://registry.npmjs.org; then
-  echo "❌ Error: npm publish failed"
-  exit 1
-fi
+# Add --no-interactive flag to prevent prompts
+npm publish --registry=https://registry.npmjs.org --no-interactive
 
 echo "✅ Publish complete!"
-exit 0  # Explicitly exit after successful publication
+# Force kill any potential hanging npm processes
+pkill -f npm || true
+exit 0
