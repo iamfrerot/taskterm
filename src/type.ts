@@ -3,4 +3,7 @@ export interface ITask {
   description: string;
   completed: boolean;
   created_at: string;
+  priority: "high" | "medium" | "low";
+  due_date?: string;
+  tags?: string[];
 }
