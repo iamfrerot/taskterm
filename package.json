@@ -1,6 +1,6 @@
 {
   "name": "taskterm",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "taskterm is a terminal-based manager app that allows you to manage your tasks directly from the command line. it provides a simple, efficient, and fast way to manage your tasks.",
   "main": "dist/taskManager.js",
   "bin": {
